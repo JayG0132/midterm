@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBasedNews</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-section">
+
+        <div class="content">
+
+            <header class="site-header">
+
+                <a href="About.html" class="header-link">About</a>
+
+                <h1>
+                    <img class="logo" src="images/logo.png" alt="SkillBasedNews">
+                    <span class="slogan">
+                        The latest and greatest of Gaming news. Written by players for players.
+                    </span>
+                </h1>
+
+                <a href="Contact.html" class="header-link">Contact</a>
+
+            </header>
+
+            <div class="glow-line"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="top-section">
+
+        <div class="content">
+
+
+            <div class="slider-row">
+
+
+                <div class="slider-wrapper">
+
+                    <div class="slider">
+
+                        <img id="slide-1" src="images/ps5disc.jpg" alt="Disc Drama">
+
+                        <img id="slide-2" src="images/steammachine.jpg" alt="Steam Machine">
+
+                        <img id="slide-3" src="images/zelda.jpg" alt="Zelda Remake">
+
+                    </div>
+
+
+                    <div class="slider-nav">
+
+                        <a href="#slide-1"
+                           data-headline="Sony's PS5 Disc Drama: What Players Need To Know.">
+                        </a>
+
+                        <a href="#slide-2"
+                           data-headline="Valve's Steam Machine debuts to mediocre critical reception.">
+                        </a>
+
+                        <a href="#slide-3"
+                           data-headline="The Legend Of Zelda Remake brings back a classic.">
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="headline-box">
+                    Sony's PS5 Disc Drama: What Players Need To Know
+                </div>
+
+
+
+                <div class="search-box">
+
+                    <input type="text" placeholder="Search...">
+
+                    <div class="search-icon">
+                        ⌕
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a class="Nintendo" href="Nintendo.html">
+                            Nintendo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="Playstation" href="Playstation.html">
+                            Playstation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="Xbox" href="Xbox.html">
+                            Xbox
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="PC" href="PC.html">
+                            PC
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="category-images">
+
+                <div>
+                    <img src="images/mario.png" alt="Mario">
+                </div>
+
+                <div>
+                    <img src="images/Kratos.png" alt="Kratos">
+                </div>
+
+                <div>
+                    <img src="images/Halo.png" alt="Halo">
+                </div>
+
+                <div>
+                    <img src="images/Steam.png" alt="Steam">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+const headlineBox = document.querySelector(".headline-box");
+
+const buttons = document.querySelectorAll(".slider-nav a");
+
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", function() {
+
+
+        headlineBox.style.opacity = "0";
+
+
+        setTimeout(() => {
+
+            headlineBox.textContent = this.dataset.headline;
+
+            headlineBox.style.opacity = "1";
+
+        }, 200);
+
+
+    });
+
+
+});
+
+</script>
+
+<footer class="site-footer">
+    
+</footer>
+
+
+</body>
+</html>
